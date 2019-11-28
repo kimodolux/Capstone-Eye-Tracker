@@ -1,5 +1,7 @@
 # USYD CP34 Eye Tracking Chrome extension
 
+# Code written for and owned by Ben Sand. ben@bensand.com
+
 ## Installation
 1. Open your chrome browser
 2. Go Preference -> Extension (on the left sidebar)

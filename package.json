@@ -1,0 +1,23 @@
+{
+  "name": "gazepop",
+  "version": "1.0.0",
+  "description": "1. Open the index.html file in your browser\r 2. use the webcam in the top left corner to fit a green face tracking mesh over your face by moving your face.\r 3. move your cursor to various positions on the screen and follow it with your eyes\r 4. focus on the cursor and press the spacebar to register a new sample\r 5. after you have collected enough samples (at least 3 validation samples should be registered), click the \"Start Training\" button.\r 6. Wait a bit, it takes 5 seconds to train the convolutional neural network\r 7. Great! once the neural network has been trained, a red dot should start tracking your gaze.",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clang-format": "^1.2.3",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.7.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@tensorflow/tfjs": "^1.3.1"
+  }
+}

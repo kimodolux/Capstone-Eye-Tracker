@@ -1,0 +1,49 @@
+{
+  "name": "Eye Tracking",
+  "version": "4.0",
+  "description": "CP34 Track My Brain - Eye Tracking!",
+
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": ["dist/background.js"],
+    "persistent": true
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "extension/images/icon16.png",
+      "32": "extension/images/icon32.png",
+      "48": "extension/images/icon48.png",
+      "128": "extension/images/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "extension/images/icon16.png",
+    "32": "extension/images/icon32.png",
+    "48": "extension/images/icon48.png",
+    "128": "extension/images/icon128.png"
+  },
+
+  "content_scripts": [{
+    "run_at": "document_end",
+    "css": [ "style.css" , "oldstyle.css"],
+    "matches": ["http://*/*", "https://*/*" ],
+    "js": ["dependencies/jquery-3.4.1.min.js","dependencies/clmtrackr.js", "dependencies/simpleheat.js", "dist/content.js"]
+  }],
+  
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "manifest_version": 2
+}
